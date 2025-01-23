@@ -1,17 +1,10 @@
 import "./navbar.css";
-import { Button, ConfigProvider, Flex, Popover } from "antd";
+import { ConfigProvider, Flex, Popover } from "antd";
 
 const NavBar = () => {
   return (
     <div className="navbar-main">
-      <ConfigProvider
-        button={{
-          style: {
-            width: buttonWidth,
-            margin: 4,
-          },
-        }}
-      >
+      <ConfigProvider>
         <div className="logos">
           <div className="nav-logo">
             <img src="Logo.png" />
@@ -20,10 +13,20 @@ const NavBar = () => {
         </div>
 
         <div className="nav-contents">
-          <p>HOME</p>
-          <p>MENU</p>
-          <p>MAKE A RESERVETION</p>
-          <p>CONTACT US</p>
+          <Flex
+            justify="center"
+            align="center"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
+            <p>HOME</p>
+            <Popover placement="bottomLeft">
+              <p>MENU</p>
+            </Popover>
+            <p>MAKE A RESERVETION</p>
+            <p>CONTACT US</p>
+          </Flex>
         </div>
       </ConfigProvider>
     </div>
