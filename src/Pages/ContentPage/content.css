@@ -8,13 +8,19 @@
   background-size: cover;
   line-height: 1;
 }
-.logo img {
+.logo {
+  background-image: url("../../assets/uploads/SOFT.png");
+  background-repeat: no-repeat;
   width: 60px;
   height: 28px;
   margin-left: 363px;
   padding: 5px;
 }
 .content-name {
+  background-image: url("../../assets/uploads/menu.png");
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 177px;
   margin: 40px auto;
   display: flex;
   justify-content: center;

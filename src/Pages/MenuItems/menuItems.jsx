@@ -20,8 +20,8 @@ const MenuItems = () => {
       <div className="menuContents">
         {menu.map((item) => {
           return (
-            <div className="rectangle">
-              <p key={item._id}>{item.menuName}</p>;
+            <div className="rectangle" key={item._id}>
+              <p>{item.menuName}</p>
             </div>
           );
         })}

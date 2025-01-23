@@ -21,7 +21,8 @@
   display: flex;
   gap: 15px;
 }
-.nav-logo img {
+.nav-logo {
+  background-image: url("../assets/uploads/Logo.png");
   height: 65px;
   width: 75px;
   position: absolute;
@@ -40,4 +41,10 @@
   display: flex;
   gap: 20px;
   position: relative;
+}
+.popup {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
