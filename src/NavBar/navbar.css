@@ -50,3 +50,41 @@
   flex-direction: column;
   gap: 10px;
 }
+
+@media screen and (max-width: 360px) {
+  .navbar-main {
+    height: 40px;
+  }
+
+  .nav-contents {
+    display: none;
+  }
+
+  .nav-contents p {
+    display: none;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin: 10px auto;
+  }
+
+  .nav-logo2 {
+    background-image: none;
+  }
+
+  .popup {
+    width: 220px;
+    gap: 8px;
+  }
+}

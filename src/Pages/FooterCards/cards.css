@@ -97,16 +97,18 @@
   right: 16px;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 360px) {
   .cards-main {
-    height: 300px;
-    gap: 20px;
+    min-height: 650px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
   }
 
   .connect,
   .companyName,
   .find {
-    width: 400px;
+    width: 80%;
     height: 150px;
   }
 
@@ -116,132 +118,25 @@
   }
 
   .logoss {
-    width: 350px;
-    height: 220px;
-    left: 150px;
-  }
-
-  .name {
-    width: 200px;
-    height: 200px;
-  }
-
-  .social {
     width: 100px;
-    height: 80px;
-  }
-}
-
-@media screen and (max-width: 1920px) and (min-width: 1366px) {
-  .cards-main {
-    height: 250px;
-    gap: 15px;
-  }
-
-  .connect,
-  .companyName,
-  .find {
-    width: 320px;
-    height: 120px;
-  }
-
-  .connect-head {
-    width: 180px;
-    height: 13px;
-  }
-
-  .logoss {
-    width: 300px;
-    height: 180px;
-    left: 120px;
-  }
-
-  .name {
-    width: 150px;
-    height: 180px;
-  }
-
-  .social {
-    width: 75px;
-    height: 65px;
-  }
-}
-
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  .cards-main {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .connect,
-  .companyName,
-  .find {
-    width: 240px;
-    height: 90px;
-  }
-
-  .connect-head {
-    width: 140px;
-    height: 8px;
-  }
-
-  .logoss {
-    width: 200px;
-    height: 120px;
-    left: 50px;
-  }
-
-  .name {
-    width: 100px;
-    height: 120px;
-  }
-
-  .social {
-    width: 50px;
     height: 40px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .cards-main {
-    flex-wrap: wrap;
-    height: auto;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .connect,
-  .companyName,
-  .find {
-    width: 90%;
-    height: auto;
-  }
-
-  .connect-head {
-    width: 100px;
-    height: 8px;
-  }
-
-  .logoss {
-    width: 150px;
-    height: 100px;
-    left: 0;
+    left: 30px;
+    top: 1px;
   }
 
   .name {
-    width: 80px;
+    top: 15px;
+    width: 150px;
     height: 100px;
   }
 
   .social {
-    width: 40px;
+    width: 120px;
     height: 35px;
   }
 
   .location {
-    width: 120px;
+    width: 140px;
     height: 60px;
     bottom: 5px;
     right: 0;
