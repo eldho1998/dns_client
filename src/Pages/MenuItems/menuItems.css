@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap");
+
+.menuItems-main {
+  background-image: url("../../../public/uploads/Rectangle\ 107.png");
+  height: 79px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuContents p {
+  color: #f5f5f5;
+  font-family: "Oswald", sans-serif;
+}
+.menuContents {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.rectangle {
+  width: 114.25px;
+  height: 49.98px;
+  border: 0.5px solid #0796ef;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

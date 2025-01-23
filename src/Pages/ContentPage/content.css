@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap");
+
+.content-main {
+  background-image: url("../../../public/uploads/Rectangle\ 103.png");
+  height: 311px;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1;
+}
+.logo img {
+  width: 60px;
+  height: 28px;
+  margin-left: 363px;
+  padding: 5px;
+}
+.content-name {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-description p {
+  font-family: "Kelly Slab";
+  color: #bbbbbb;
+}
+
+.content-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+.next-line {
+  display: block;
+  text-align: center;
+}
