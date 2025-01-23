@@ -1,7 +1,30 @@
 .itemList-main {
-  background-image: url("../../assets/uploads/rec.png");
+  background-image: url('../../assets/uploads/rec.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 672px;
   width: 100%;
+  position: relative;
+}
+.sideFrame {
+  background-image: url('../../assets/uploads/leftdesign.png');
+  background-repeat: no-repeat;
+  width: 299px;
+  height: 641px;
+}
+.rightFrame {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 158px;
+  height: 640px;
+  background-image: url('../../assets/uploads/Frame.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frames {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
