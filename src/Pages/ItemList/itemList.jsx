@@ -18,8 +18,12 @@ const ItemList = () => {
   return (
     <div className="itemList-main">
       <div className="frames">
-        <div className="sideFrame"></div>
+        <div className="sideFrame">
+          <div className="glass1"></div>
+          <div className="border"></div>
+        </div>
         <div className="center-contents">
+          <div className="glass2"></div>
           {Items.map(item => {
             return (
               <div key={item._id} className="lists">

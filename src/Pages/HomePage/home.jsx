@@ -1,8 +1,10 @@
-import "./home.css";
-import NavBar from "../../NavBar/navbar";
-import Content from "../ContentPage/content";
-import MenuItems from "../MenuItems/menuItems";
-import ItemList from "../ItemList/itemList";
+import './home.css';
+import NavBar from '../../NavBar/navbar';
+import Content from '../ContentPage/content';
+import MenuItems from '../MenuItems/menuItems';
+import ItemList from '../ItemList/itemList';
+import Cards from '../FooterCards/cards';
+import Footer from '../Footer/footer';
 // import { useState, useEffect } from "react";
 // import axios from "axios";
 
@@ -28,6 +30,8 @@ const Home = () => {
       <Content />
       <MenuItems />
       <ItemList />
+      <Cards />
+      <Footer />
     </div>
   );
 };

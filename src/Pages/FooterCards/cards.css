@@ -1,0 +1,249 @@
+.cards-main {
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.connect,
+.companyName,
+.find {
+  width: 320px;
+  height: 120px;
+  border-radius: 15px;
+  border: 2px solid rgb(97, 95, 95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.connect-head {
+  background-image: url('../../assets/uploads/connect.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 13px;
+}
+.connect-phone,
+.connect-mail {
+  background-image: url('../../assets/uploads/call.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.connect-mail {
+  background-image: url('../../assets/uploads/mail.png');
+}
+
+.logoss {
+  background-image: url('../../assets/uploads/Logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 180px;
+  position: relative;
+  bottom: 20px;
+  left: 120px;
+}
+
+.name {
+  background-image: url('../../assets/uploads/dns.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  position: relative;
+  bottom: 20px;
+  height: 180px;
+}
+.social {
+  background-image: url('../../assets/uploads/social.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 65px;
+  position: relative;
+  bottom: 30px;
+}
+.find {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.findus {
+  background-image: url('../../assets/uploads/Findus.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 20px;
+  margin: 20px auto;
+}
+.location {
+  background-image: url('../../assets/uploads/Location.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 80px;
+  position: relative;
+  bottom: 20px;
+  right: 16px;
+}
+
+@media screen and (min-width: 1920px) {
+  .cards-main {
+    height: 300px;
+    gap: 20px;
+  }
+
+  .connect,
+  .companyName,
+  .find {
+    width: 400px;
+    height: 150px;
+  }
+
+  .connect-head {
+    width: 200px;
+    height: 15px;
+  }
+
+  .logoss {
+    width: 350px;
+    height: 220px;
+    left: 150px;
+  }
+
+  .name {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1366px) {
+  .cards-main {
+    height: 250px;
+    gap: 15px;
+  }
+
+  .connect,
+  .companyName,
+  .find {
+    width: 320px;
+    height: 120px;
+  }
+
+  .connect-head {
+    width: 180px;
+    height: 13px;
+  }
+
+  .logoss {
+    width: 300px;
+    height: 180px;
+    left: 120px;
+  }
+
+  .name {
+    width: 150px;
+    height: 180px;
+  }
+
+  .social {
+    width: 75px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .cards-main {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .connect,
+  .companyName,
+  .find {
+    width: 240px;
+    height: 90px;
+  }
+
+  .connect-head {
+    width: 140px;
+    height: 8px;
+  }
+
+  .logoss {
+    width: 200px;
+    height: 120px;
+    left: 50px;
+  }
+
+  .name {
+    width: 100px;
+    height: 120px;
+  }
+
+  .social {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards-main {
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .connect,
+  .companyName,
+  .find {
+    width: 90%;
+    height: auto;
+  }
+
+  .connect-head {
+    width: 100px;
+    height: 8px;
+  }
+
+  .logoss {
+    width: 150px;
+    height: 100px;
+    left: 0;
+  }
+
+  .name {
+    width: 80px;
+    height: 100px;
+  }
+
+  .social {
+    width: 40px;
+    height: 35px;
+  }
+
+  .location {
+    width: 120px;
+    height: 60px;
+    bottom: 5px;
+    right: 0;
+  }
+}

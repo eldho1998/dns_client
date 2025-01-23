@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 .itemList-main {
   background-image: url('../../assets/uploads/rec.png');
   background-repeat: no-repeat;
@@ -27,4 +29,36 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+.lists .itemDescription h2 {
+  width: 100px;
+  height: 70px;
+  font-family: 'Oswald';
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid;
+  box-shadow: 4px 3px 0px 0px rgba(128, 0, 32, 1);
+}
+.glass2 {
+  background-image: url('../../assets/uploads/glass2.png');
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 281px;
+  right: 150px;
+  position: relative;
+}
+.glass1 {
+  background-image: url('../../assets/uploads/glass1.png');
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 281px;
+  position: relative;
+  left: 150px;
+}
+.border {
+  border: 2px solid rgb(97, 95, 95);
+  position: relative;
+  left: 200px;
+  bottom: 140px;
+  width: 980px;
+  height: 380px;
 }

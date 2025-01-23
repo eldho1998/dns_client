@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 
 .content-main {
-  background-image: url("../../assets/uploads/banner.png");
+  background-image: url('../../assets/uploads/banner.png');
   height: 311px;
   min-width: 100%;
   background-repeat: no-repeat;
@@ -9,15 +9,16 @@
   line-height: 1;
 }
 .logo {
-  background-image: url("../../assets/uploads/SOFT.png");
+  background-image: url('../../assets/uploads/SOFT.png');
   background-repeat: no-repeat;
+  background-size: cover;
   width: 60px;
   height: 28px;
   margin-left: 363px;
   padding: 5px;
 }
 .content-name {
-  background-image: url("../../assets/uploads/menu.png");
+  background-image: url('../../assets/uploads/menu.png');
   background-repeat: no-repeat;
   height: 75px;
   width: 177px;
@@ -27,7 +28,7 @@
   align-items: center;
 }
 .content-description p {
-  font-family: "Kelly Slab";
+  font-family: 'Kelly Slab';
   color: #bbbbbb;
 }
 
@@ -40,4 +41,57 @@
 .next-line {
   display: block;
   text-align: center;
+}
+
+@media screen and (max-width: 1366px) {
+  .content-main {
+    background-image: url('../../assets/uploads/banner.png');
+    height: 250px;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1;
+  }
+
+  .logo {
+    background-image: url('../../assets/uploads/SOFT.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55px;
+    height: 20px;
+    margin-left: 205px;
+    padding: 5px;
+  }
+
+  .content-name {
+    background-image: url('../../assets/uploads/menu.png');
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 170px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-description p {
+    font-family: 'Kelly Slab';
+    color: #bbbbbb;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .content-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    margin: 10px 20px;
+  }
+
+  .next-line {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
