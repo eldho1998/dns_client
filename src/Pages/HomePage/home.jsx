@@ -5,30 +5,30 @@ import MenuItems from '../MenuItems/menuItems';
 import ItemList from '../ItemList/itemList';
 import Cards from '../FooterCards/cards';
 import Footer from '../Footer/footer';
-// import { useState, useEffect } from "react";
-// import axios from "axios";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Home = () => {
-  // const [menu, setMenu] = useState([]);
+  const [menu, setMenu] = useState([]);
 
-  // const fetchMenuLists = async () => {
-  //   try {
-  //     const response = await axios.get(`http://localhost:7070/menu`);
-  //     setMenu(response.data.menu);
-  //   } catch (e) {
-  //     console.error("Error fetching menu:", e);
-  //   }
-  // };
+  const fetchMenuLists = async () => {
+    try {
+      const response = await axios.get(`http://localhost:7070/menu`);
+      setMenu(response.data.menu);
+    } catch (e) {
+      console.error('Error fetching menu:', e);
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchMenuLists();
-  // }, []);
+  useEffect(() => {
+    fetchMenuLists();
+  }, []);
 
   return (
     <div className="home-main">
-      <NavBar />
+      <NavBar fetchMenuLists={fetchMenuLists} />
       <Content />
-      <MenuItems />
+      <MenuItems menu={menu} />
       <ItemList />
       <Cards />
       <Footer />
