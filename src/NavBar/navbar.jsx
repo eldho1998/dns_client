@@ -1,13 +1,14 @@
-import './navbar.css';
-import axios from 'axios';
-import { useState } from 'react';
-import { ConfigProvider, Popover, Input, Button } from 'antd';
-import { message } from 'antd';
+import "./navbar.css";
+import axios from "axios";
+import { useState } from "react";
+import { ConfigProvider, Popover, Input, Button } from "antd";
+import { message } from "antd";
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
-const NavBar = ({ fetchMenuLists }) => {
+const NavBar = ({ fetchMenuLists, setRefresh }) => {
   const [menuAdd, setMenuADD] = useState({
-    menuName: '',
-    description: '',
+    menuName: "",
+    description: "",
   });
 
   const onChange = (e, key) => {
@@ -16,13 +17,12 @@ const NavBar = ({ fetchMenuLists }) => {
 
   const OnBtnClick = async () => {
     try {
-      const response = await axios.post('http://localhost:7070/menu', menuAdd);
-      console.log(response.data);
-      message.success('Menu added successfully!');
-      fetchMenuLists();
+      const response = await axios.post(`${serverUrl}/menu`, menuAdd);
+      message.success("Menu added successfully!");
+      setRefresh(true);
     } catch (e) {
-      message.error('Failed to add menu. Please try again.');
-      console.error('There was an error!', e);
+      message.error("Failed to add menu. Please try again.");
+      console.error("There was an error!", e);
     }
   };
 
@@ -37,11 +37,11 @@ const NavBar = ({ fetchMenuLists }) => {
         <div className="nav-contents">
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '20px',
-              whiteSpace: 'nowrap',
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "20px",
+              whiteSpace: "nowrap",
             }}
           >
             <p>HOME</p>
@@ -50,11 +50,11 @@ const NavBar = ({ fetchMenuLists }) => {
               content={
                 <div className="popup">
                   <Input
-                    onChange={e => onChange(e, 'menuName')}
+                    onChange={(e) => onChange(e, "menuName")}
                     placeholder="enter a menu name"
                   />
                   <Input
-                    onChange={e => onChange(e, 'description')}
+                    onChange={(e) => onChange(e, "description")}
                     placeholder="menu description"
                   />
                   <Button onClick={OnBtnClick} type="primary">
@@ -66,7 +66,7 @@ const NavBar = ({ fetchMenuLists }) => {
               trigger="hover"
               placement="bottomLeft"
             >
-              <p style={{ cursor: 'pointer' }}>MENU</p>
+              <p style={{ cursor: "pointer" }}>MENU</p>
             </Popover>
 
             <p>MAKE A RESERVATION</p>

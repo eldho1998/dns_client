@@ -7,14 +7,16 @@ import Cards from "../FooterCards/cards";
 import Footer from "../Footer/footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 const Home = () => {
   const [menu, setMenu] = useState([]);
   const [id, setId] = useState("");
+  const [refresh, setRefresh] = useState(false);
 
   const fetchMenuLists = async () => {
     try {
-      const response = await axios.get(`http://localhost:7070/menu`);
+      const response = await axios.get(`${serverUrl}/menu`);
       setMenu(response.data.menu);
     } catch (e) {
       console.error("Error fetching menu:", e);
@@ -27,9 +29,9 @@ const Home = () => {
 
   return (
     <div className="home-main">
-      <NavBar fetchMenuLists={fetchMenuLists} />
+      <NavBar fetchMenuLists={fetchMenuLists} setRefresh={setRefresh} />
       <Content />
-      <MenuItems setId={setId} />
+      <MenuItems setId={setId} setRefresh={setRefresh} refresh={refresh} />
       <ItemList listId={id} />
       <Cards />
       <Footer />

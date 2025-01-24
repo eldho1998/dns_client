@@ -1,22 +1,18 @@
 import "./itemList.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 const ItemList = ({ listId }) => {
-  console.log(listId);
   const [Items, setItems] = useState([]);
-
   const fetchItemLists = async () => {
-    const response = await axios.get(
-      `http://localhost:7070/menu/${listId}/items`
-    );
+    const response = await axios.get(`${serverUrl}/menu/${listId}/items`);
     setItems(response.data.items);
   };
 
   useEffect(() => {
     fetchItemLists();
   }, [listId]);
-  console.log("mennnn", Items);
 
   return (
     <div className="itemList-main">
