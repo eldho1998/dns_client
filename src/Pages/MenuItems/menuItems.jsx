@@ -1,9 +1,14 @@
-import './menuItems.css';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import "./menuItems.css";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 // const serverUrl = process.env.REACT_APP_SERVER_URL;
 
-const MenuItems = () => {
+const MenuItems = ({ setId }) => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+  console.log("menu id:", id);
+
   const [menu, setMenu] = useState([]);
 
   const fetchMenuLists = async () => {
@@ -12,17 +17,26 @@ const MenuItems = () => {
     setMenu(response.data.menu);
   };
 
+  const onMenuClick = (menuId) => {
+    setId(menuId);
+    navigate(`/`);
+  };
+
   useEffect(() => {
     fetchMenuLists();
   }, []);
-  console.log('mennnn', menu);
+  console.log("mennnn", menu);
 
   return (
     <div className="menuItems-main">
       <div className="menuContents">
-        {menu.map(item => {
+        {menu?.map((item) => {
           return (
-            <div className="rectangle" key={item._id}>
+            <div
+              onClick={() => onMenuClick(item._id)}
+              className="rectangle"
+              key={item._id}
+            >
               <p>{item.menuName}</p>
             </div>
           );

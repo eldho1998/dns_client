@@ -1,19 +1,22 @@
-import './itemList.css';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import "./itemList.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const ItemList = () => {
+const ItemList = ({ listId }) => {
+  console.log(listId);
   const [Items, setItems] = useState([]);
 
   const fetchItemLists = async () => {
-    const response = await axios.get(`http://localhost:7070/item`);
-    setItems(response.data);
+    const response = await axios.get(
+      `http://localhost:7070/menu/${listId}/items`
+    );
+    setItems(response.data.items);
   };
 
   useEffect(() => {
     fetchItemLists();
-  }, []);
-  console.log('mennnn', Items);
+  }, [listId]);
+  console.log("mennnn", Items);
 
   return (
     <div className="itemList-main">
@@ -24,15 +27,17 @@ const ItemList = () => {
         </div>
         <div className="center-contents">
           <div className="glass2"></div>
-          {Items.map(item => {
+          {Items.map((item) => {
             return (
               <div key={item._id} className="lists">
                 <div className="ItemDescription">
-                  <h2>----- BRUNCH COCKTAILS -----</h2>
+                  {/* <h1>-----MENU -----</h1> */}
                 </div>
                 <div className="itemsLists">
-                  <h3>CINNAMON TOAST CRUNCH............$16</h3>
-                  <p>Descriptions</p>
+                  <h3>
+                    {item.itemName}............{item.price}
+                  </h3>
+                  <p>{item.description}</p>
                 </div>
               </div>
             );
